@@ -1,0 +1,45 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory>
+        <SwitchPreference
+            android:key="isSound"
+            android:title="@string/isSound" />
+        <ListPreference
+            android:dependency="isSound"
+            android:entries="@array/sys_volume_entries"
+            android:entryValues="@array/sys_volume_values"
+            android:key="sysVolume"
+            android:title="@string/sys_volume"
+            app:isPreferenceVisible="false" />
+        <ListPreference
+            android:entries="@array/lock_system_Language_entries"
+            android:entryValues="@array/lock_system_Language_values"
+            android:key="lockSystemLanguage"
+            android:title="@string/lock_system_Language"
+            app:isPreferenceVisible="false" />
+    </PreferenceCategory>
+
+    <PreferenceCategory>
+        <SwitchPreference
+            android:key="lockOpenAuth"
+            android:summary="@string/lock_open_summy"
+            android:title="@string/lock_open_auth_title" />
+        <SwitchPreference
+            android:key="normally_open"
+            android:summary="@string/normally_open_summy"
+            android:title="@string/normally_open_title" />
+        <SwitchPreference
+            android:key="isTamperWarn"
+            android:summary="@string/is_temper_warn_summy"
+            android:title="@string/is_temper_warn_title" />
+        <SwitchPreference
+            android:key="isLockCoreWarn"
+            android:summary="@string/core_flag_summy"
+            android:title="@string/core_flag_title" />
+        <SwitchPreference
+            android:key="isLockCap"
+            android:summary="@string/is_cover_flag_summy"
+            android:title="@string/is_cover_flag_title" />
+    </PreferenceCategory>
+</PreferenceScreen>

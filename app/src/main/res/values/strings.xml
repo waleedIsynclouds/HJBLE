@@ -1,0 +1,116 @@
+<resources>
+    <string name="app_name"> HXJBLESDK </string>
+    <string name="add_device"> Add device </string>
+    <string name="lock_detail"> Lock details </string>
+    <string name="title_activity_main_fun"> MainFunActivity </string>
+    <string name="navigation_drawer_open"> Open navigation drawer </string>
+    <string name="navigation_drawer_close"> Close navigation drawer </string>
+    <string name="nav_header_title"> HXJBLESDK </string>
+    <string name="nav_header_subtitle"> android.studio@android.com </string>
+    <string name="nav_header_desc"> Navigation header </string>
+    <string name="action_settings"> Settings </string>
+    <string name="menu_home"> Home page </string>
+    <string name="menu_gallery"> Add command </string>
+    <string name="menu_keymanage"> Key list </string>
+
+    <string name="start_adding"> Start adding </string>
+    <string name="user_id"> Key group (user ID) </string>
+    <string name="user_id_hint"> Please enter the key group ID </string>
+    <string name="pass_key_hint"> Please enter the unlock password </string>
+
+    <string name="hello_blank_fragment"> Hello blank fragment </string>
+    <string name="dialog_del_key"> Confirm delete key </string>
+    <string name="del"> Delete </string>
+    <string name="cancel"> Cancel </string>
+    <!--Strings used for fragments for navigation-->
+    <string name="first_fragment_label"> Add device 1/2 </string>
+    <string name="second_fragment_label"> Add device 2/2 </string>
+    <string name="press_reset_add_firest_fragment"> Long press the set button until you hear the sound of "didi", the door lock indicator will start flashing </string>
+    <string name="next"> Next </string>
+    <string name="start_add_second_fragment"> Start adding </string>
+    <string name="close_to_lock_add_secone_fragment"> Please try to keep the phone close to the door lock </string>
+    <string name="del_lock_ing"> deleting the door lock </string>
+    <string name="getDna"> Getting dna </string>
+    <string name="openLock"> unlock </string>
+    <string name="addSuccess"> Add successfully </string>
+    <string name="add_hint"> Please swipe / input fingerprint / press remote control </string>
+    <string name="no_permission"> No permission </string>
+    <string name="not_you_device"> This device does not belong to you, background authentication failed </string>
+    <string name="geted_permission"> You have applied for permission! </string>
+    <string name="title_activity_oad_loading">OadLoadingActivity</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="oad_first_fragment_label">upgrading</string>
+    <string name="oad_second_fragment_label">Upgrading 2</string>
+    <string name="sync_log">Sync log</string>
+    <string name="pls_input_name">Enter lock name</string>
+    <string name="lock_name">Lock name</string>
+    <string name="export_records">Export unlock record</string>
+    <string name="ble_open_test">Bluetooth unlock test</string>
+    <string name="clear_records">Clear local records</string>
+    <string name="add_key">Add key</string>
+    <string name="del_lock">Delete</string>
+    <string name="lock_setting">Lock settings</string>
+
+    <!-- Preference Titles -->
+    <string name="sync_header">Sync</string>
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails</string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <string name="isSound">Lock voice</string>
+    <string name="sys_volume">Lock volume</string>
+    <string name="lock_system_Language">Lock language</string>
+    <string name="lock_open_auth_title">Two-factor Verification</string>
+    <string name="lock_open_summy">Non-administrator need two different keys to locally unlock.</string>
+    <string name="normally_open_title">Passage mode</string>
+    <string name="normally_open_summy">Requires manual locking</string>
+    <string name="is_temper_warn_title">Lock picking alarm</string>
+    <string name="is_temper_warn_summy">Lockpicking detection alarm</string>
+    <string name="core_flag_title">Lock cylinder breaking alarm</string>
+    <string name="core_flag_summy">Cylinder error detection alarm</string>
+    <string name="is_cover_flag_title">Lock cover alarm</string>
+    <string name="is_cover_flag_summy">Keyhole cover error detection alarm</string>
+    <string name="near_lock">Nearby lock</string>
+    <string name="device_list">Device List</string>
+    <string name="updata">Upgrade</string>
+    <string name="action_dfu">DFU</string>
+    <string name="action_nfc">NFC</string>
+    <string name="operation_record">Lock Records</string>
+    <string name="permission_tips">权限被拒绝，请在手机系统设置里面开启相应权限，若无相应权限会影响使用</string>
+    <string name="mac_is_null">Error, Device mac is null</string>
+    <string name="scan_lock_fail">Failed to scan lock</string>
+    <string name="lock_operation_success">Operation successful</string>
+    <string name="ble_timeout">Bluetooth operation timed out</string>
+    <string name="ble_scan_timeout">Bluetooth scan timed out</string>
+    <string name="select_image_file">选择待升级固件</string>
+    <string name="start_upgrade">开始升级</string>
+    <string name="upgrade_progress">升级中... (%d%%)</string>
+    <string name="upgrade_completed">升级完成</string>
+    <string name="upgrade_failed">升级失败</string>
+    <string name="open_mobile_location">请开启手机定位和权限</string>
+    <string name="close"></string>
+    <string name="scan_device">搜索设备...</string>
+    <string name="connect_device">连接设备...</string>
+    <string name="waiting_for_upgrade">准备升级...</string>
+    <string name="get_lock_dna_info">获取蓝牙锁DNA信息...</string>
+    <string name="lock_softversion">蓝牙锁固件版本</string>
+    <string name="add_finger">添加指纹</string>
+    <string name="add_password">添加密码</string>
+    <string name="add_card">添加卡片</string>
+    <string name="add_remoteControl">添加遥控</string>
+    <string name="Localizable_preBleSendKeyData">准备蓝牙下发钥匙数据...</string>
+    <string name="Localizable_FailedToAddKey">添加钥匙失败</string>
+    <string name="Localizable_bleSendKeyData">蓝牙下发钥匙数据...</string>
+    <string name="timeout">超时</string>
+    <string name="Localizable_AddKeyTips">1. 请保持正脸，五官明显，面部无遮挡，正常表情。\\n2. 录入光线充足，无阳光直射</string>
+    <string name="addFace">添加人脸</string>
+    <string name="get_nbIoT_module_info">获取NBIoT模组信息</string>
+    <string name="get_cat1_module_info">获取Cat.1模组信息</string>
+    <string name="set_lock_key_expiration_alarm_time">设置用户钥匙到期提醒时间</string>
+
+
+</resources>

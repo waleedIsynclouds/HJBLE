@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.hxjblesdk.ui.lockfun.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_nav_home_to_addKeyTypeDialogFragment"
+            app:destination="@id/addKeyTypeDialogFragment">
+            <argument
+                android:name="lockFunctionType"
+                app:argType="integer" />
+        </action>
+        <action
+            android:id="@+id/action_nav_home_to_nav_kayManage"
+            app:destination="@id/nav_kayManage" />
+        <action
+            android:id="@+id/action_nav_home_to_lockSettingsFragment"
+            app:destination="@id/lockSettingsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_gallery"
+        android:name="com.example.hxjblesdk.ui.lockfun.newfeature.NewFeatureFragment"
+        android:label="@string/menu_gallery"
+        tools:layout="@layout/fragment_new_feature" />
+    <fragment
+        android:id="@+id/nav_sync_log"
+        android:name="com.example.hxjblesdk.ui.lockfun.syncLockLog.SyncLogFragment"
+        android:label="fragment_sync_log"
+        tools:layout="@layout/fragment_sync_log" />
+    <fragment
+        android:id="@+id/nav_kayManage"
+        android:name="com.example.hxjblesdk.ui.lockfun.keymanage.KeyManageFragment"
+        android:label="@string/menu_keymanage"
+        tools:layout="@layout/fragment_keymanage">
+        <action
+            android:id="@+id/action_nav_slideshow_to_addKeyTypeDialogFragment"
+            app:destination="@id/addKeyTypeDialogFragment">
+            <argument
+                android:name="lockFunctionType"
+                app:argType="integer" />
+        </action>
+        <action
+            android:id="@+id/action_nav_kayManage_to_keyDetailFragment"
+            app:destination="@id/keyDetailFragment">
+            <argument
+                android:name="keyId"
+                app:argType="integer" />
+            <argument
+                android:name="keyType"
+                app:argType="integer" />
+            <argument
+                android:name="keyName"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_nav_kayManage_to_modifyKeyFragment"
+            app:destination="@id/modifyKeyFragment">
+            <argument
+                android:name="keyDetails"
+                app:argType="com.example.hxjblinklibrary.blinkble.entity.reslut.LockKeyResult" />
+
+        </action>
+    </fragment>
+
+
+    <dialog
+        android:id="@+id/addKeyTypeDialogFragment"
+        android:name="com.example.hxjblesdk.ui.lockfun.keymanage.AddKeyTypeDialogFragment"
+        android:label="fragment_add_key_type_dialog_list"
+        tools:layout="@layout/fragment_add_key_type_dialog_list">
+        <argument
+            android:name="lockFunctionType"
+            android:defaultValue="255"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_addKeyTypeDialogFragment_to_addKeyFragment"
+            app:destination="@id/addKeyFragment">
+            <argument
+                android:name="keyType"
+                android:defaultValue="0"
+                app:argType="integer" />
+        </action>
+    </dialog>
+    <fragment
+        android:id="@+id/addKeyFragment"
+        android:name="com.example.hxjblesdk.ui.lockfun.keymanage.AddKeyFragment"
+        android:label="@string/add_key"
+        tools:layout="@layout/fragment_add_key">
+        <argument
+            android:name="keyType"
+            android:defaultValue="0"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/keyDetailFragment"
+        android:name="com.example.hxjblesdk.ui.lockfun.keymanage.KeyDetailFragment"
+        android:label="@string/lock_detail"
+        tools:layout="@layout/key_detail_fragment">
+        <argument
+            android:name="keyDetails"
+            app:argType="com.example.hxjblinklibrary.blinkble.entity.reslut.LockKeyResult" />
+    </fragment>
+    <fragment
+        android:id="@+id/modifyKeyFragment"
+        android:name="com.example.hxjblesdk.ui.lockfun.keymanage.ModifyKeyFragment"
+        android:label="modify_key_fragment"
+        tools:layout="@layout/modify_key_fragment">
+        <argument
+            android:name="keyDetails"
+            app:argType="com.example.hxjblinklibrary.blinkble.entity.reslut.LockKeyResult" />
+
+    </fragment>
+
+    <fragment android:id="@+id/placeholder">
+        <action
+            android:id="@+id/action_placeholder_to_nav_home"
+            app:destination="@id/nav_home" />
+        <action
+            android:id="@+id/action_placeholder_to_nav_gallery"
+            app:destination="@id/nav_gallery" />
+        <action
+            android:id="@+id/action_placeholder_to_nav_sync_log"
+            app:destination="@id/nav_sync_log" />
+    </fragment>
+    <fragment
+        android:id="@+id/lockSettingsFragment"
+        android:name="com.example.hxjblesdk.ui.lockfun.locksetting.LockSettingsFragment"
+        android:label="@string/lock_setting" />
+
+
+</navigation>

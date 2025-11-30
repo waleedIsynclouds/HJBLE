@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_oad"
+    app:startDestination="@id/OadLoadingFirstFragment">
+
+    <fragment
+        android:id="@+id/OadLoadingFirstFragment"
+        android:name="com.example.hxjblesdk.ui.oad.OadLoadingFirstFragment"
+        android:label="@string/oad_first_fragment_label"
+        tools:layout="@layout/fragment_first_oad_loading">
+
+        <action
+            android:id="@+id/action_First2Fragment_to_Second2Fragment"
+            app:destination="@id/OadLoadingSecondFragment" />
+        <argument
+            android:name="upDateList"
+            app:argType="com.example.hxjblesdk.db.beans.LockListBean[]" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/OadLoadingSecondFragment"
+        android:name="com.example.hxjblesdk.ui.oad.OadLoadingSecondFragment"
+        android:label="@string/oad_second_fragment_label"
+        tools:layout="@layout/fragment_second_oad_loading">
+
+        <action
+            android:id="@+id/action_Second2Fragment_to_First2Fragment"
+            app:destination="@id/OadLoadingFirstFragment" />
+    </fragment>
+</navigation>
