@@ -20,9 +20,9 @@ public class HXToast {
     }
 
     /**
-     * 可以在子线程中调用
+     * Can be called in a child thread
      *
-     * @param msg toast内容
+     * @param msg toast message content
      */
     public static void show(final String msg) {
         if (msg != null && msg.length() > 0) {

@@ -82,15 +82,15 @@ public class MyBleClient extends HxjBleClient {
                     case 0x2D:
                         KeyEventRegWifi wifiReport = EventPostDataParser.parseWifiReg(substring);
                         if (wifiReport.getWifiStatues() == 0x04) {
-                            Log.d(TAG, "WiFi模组连接路由器成功");
+                            Log.d(TAG, "WiFi module successfully connected to router");
                         }else if (wifiReport.getWifiStatues() == 0x05) {
-                            Log.d(TAG, "WiFi模组连接云端成功");
+                            Log.d(TAG, "WiFi module successfully connected to cloud");
                         }else if (wifiReport.getWifiStatues() == 0x06) {
-                            Log.d(TAG, "密码错误");
+                            Log.d(TAG, "Incorrect password");
                         }else if (wifiReport.getWifiStatues() == 0x07) {
-                            Log.d(TAG, "WiFi配置超时");
+                            Log.d(TAG, "WiFi configuration timeout");
                         }
-                        // 将配网结果通过EventBus等方式发送到配网相关页面
+                        // Send network configuration result to the relevant page via EventBus or other means
                         break;
                 }
 

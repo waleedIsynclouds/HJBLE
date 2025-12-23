@@ -8,7 +8,7 @@ import com.example.hxjblesdk.db.lock.Lock;
 public class LockProgressListBean implements Parcelable {
     Lock lock;
     int progress = 0;
-    int oadState = 0;//0 未开始  1正在升级  2升级成功  3升级失败
+    int oadState = 0; // 0: Not started, 1: Upgrading, 2: Upgrade successful, 3: Upgrade failed
 
     public LockProgressListBean(Lock lock) {
         this.lock = lock;

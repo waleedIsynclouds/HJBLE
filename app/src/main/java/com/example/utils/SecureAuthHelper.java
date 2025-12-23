@@ -11,7 +11,9 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 
 /**
- * 当App无法获取到蓝牙所鉴权码和DNA AES128密钥时，需要创建一个类实现IHxBleSecureAuth接口中的方法，以实现App与蓝牙锁的安全通信
+ * When the app cannot obtain the Bluetooth authentication code and DNA AES128 key,
+ * a class needs to be created to implement the methods in the IHxBleSecureAuth interface
+ * to enable secure communication between the app and the Bluetooth lock
  */
 public class SecureAuthHelper implements IHxBleSecureAuth {
 

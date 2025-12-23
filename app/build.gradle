@@ -35,7 +35,7 @@ android {
         multiDexEnabled true
         versionName "2.5.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-        // DialogX 弹框实时模糊效果
+        // DialogX popup real-time blur effect
         renderscriptTargetApi 21
         renderscriptSupportModeEnabled true
     }
@@ -76,7 +76,7 @@ dependencies {
     implementation 'androidx.multidex:multidex:2.0.1'
 
     /**
-     * 解决Mac M1没有适配sqlite的jar包导致运行报错的问题
+     * Fixes the issue where Mac M1 doesn't have the adapted SQLite JAR package causing runtime errors
      * A failure occurred while executing org.jetbrains.kotlin.gradle.internal.KaptWithoutKotlincTask$KaptExecutionWorkAction
      * > java.lang.reflect.InvocationTargetException (no error message)
      * Caused by: java.lang.Exception: No native library is found for os.name=Mac and os.arch=aarch64. path=/org/sqlite/native/Mac/aarch64
@@ -93,7 +93,7 @@ dependencies {
     implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
     implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
 
-    //解决Mac OS 因为 jdk 高于 1.8导致 import javax.annotation.processing.generated not found 的问题
+    // Fixes the issue where JDK version higher than 1.8 causes 'import javax.annotation.processing.generated not found' error on Mac OS
 //    compileOnly 'com.github.pengrad:jdk9-deps:1.0'
 
     // Lifecycle components
@@ -110,9 +110,9 @@ dependencies {
     androidTestImplementation 'androidx.test:runner:1.5.2'
 
     implementation 'androidx.recyclerview:recyclerview:1.1.0'
-    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:3.0.3'//通用adapter
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:3.0.3' // Universal adapter
     implementation 'com.github.ForgetAll:LoadingDialog:v1.1.2'
-    //implementation 'com.liyu.tools:sqlitetoexcel:1.0.10'//导出DB到excel
+    //implementation 'com.liyu.tools:sqlitetoexcel:1.0.10' // Export DB to excel
 
     // Brings the new BluetoothLeScanner API to older platforms
     implementation 'no.nordicsemi.android.support.v18:scanner:1.6.0'

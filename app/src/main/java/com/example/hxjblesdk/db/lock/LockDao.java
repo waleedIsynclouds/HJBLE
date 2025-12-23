@@ -11,7 +11,9 @@ import com.example.hxjblesdk.db.lock.Lock;
 import java.util.List;
 
 /**
- * 将类标记为数据访问对象。数据访问对象是您定义数据库交互的主要类。它们可以包含多种查询方法
+ * Marks the class as a Data Access Object. 
+ * Data Access Objects are the main classes where you define your database interactions. 
+ * They can include various query methods.
  */
 @Dao
 public interface LockDao {
