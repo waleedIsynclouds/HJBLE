@@ -32,6 +32,7 @@ import com.example.hxjblinklibrary.blinkble.scanner.HxjScanner;
 import com.example.utils.MyBleClient;
 
 import java.util.List;
+import java.util.logging.Logger;
 
 import static android.app.Activity.RESULT_CANCELED;
 
@@ -191,8 +192,10 @@ public class AddSecondFragment extends Fragment {
         secondTextView.append("\nPair success ind...");
 
         BlinkyAction hxBleAction = new BlinkyAction();
+
         hxBleAction.setBaseAuthAction(baseAuthAction);
         hxjBleClient.pairSuccessInd(hxBleAction, true, new FunCallback() {
+
             @Override
             public void onResponse(Response response) {
                 //If the Bluetooth is not disconnected and the system detects that it is connected, the settings cannot be searched
@@ -200,8 +203,22 @@ public class AddSecondFragment extends Fragment {
                 hxjBleClient.disConnectBle(null);
 
                 if (response.isSuccessful()) {//添加成功
-                    secondTextView.append("\npair success...");
+                    hxjBleClient.rfModulePairing(
+                            hxBleAction,
+                            "",
+                            new FunCallback() {
+                                @Override
+                                public void onResponse(Response response) {
+                                    Log.d(TAG, "rfModulePairing() called with: response = [" + response.toString() + "]");
+                                }
 
+                                @Override
+                                public void onFailure(Throwable throwable) {
+                                    Log.d(TAG, "rfModulePairing() called with: throwable = [" + throwable.toString() + "]");
+                                }
+                            }
+                    );
+                    secondTextView.append("\npair success...");
                   new Handler().postDelayed(new Runnable() {
                         @Override
                         public void run() {

@@ -33,6 +33,7 @@ import com.example.hxjblesdk.viewmodel.LockViewModel;
 import com.example.hxjblinklibrary.blinkble.scanner.HxjBluetoothDevice;
 import com.example.hxjblinklibrary.blinkble.scanner.HxjScanCallback;
 import com.example.hxjblinklibrary.blinkble.scanner.HxjScanner;
+import com.example.utils.SPUtils;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.xiasuhuei321.loadingdialog.view.LoadingDialog;
 
