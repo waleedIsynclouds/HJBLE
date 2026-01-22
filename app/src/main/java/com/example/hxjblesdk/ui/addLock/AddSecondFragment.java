@@ -113,11 +113,11 @@ public class AddSecondFragment extends Fragment {
      */
     public void addDevice(HxjBluetoothDevice hxjBluetoothDevice) {
         secondTextView.append("\nAdding device..." + hxjBluetoothDevice.getAddress() + " rssi = " + hxjBluetoothDevice.getRssi());
-        //authAction 的生成有2种方法，使用任意一种都可以添加设备：
-        //方法1：
+        // There are 2 ways to generate authAction, either one can be used to add a device:
+        // Method 1:
 //      BlinkyAuthAction authAction = new BlinkyAuthAction.Builder().hxjBluetoothDevice(hxjBluetoothDevice).build();
 
-        //方法2:
+        // Method 2:
         BlinkyAuthAction authAction = new BlinkyAuthAction.Builder()
                 .mac(hxjBluetoothDevice.getMac())
                 .build();
@@ -164,7 +164,7 @@ public class AddSecondFragment extends Fragment {
                 if (response.code() == StatusCode.ACK_STATUS_SUCCESS) {
                     Log.d(TAG, "deviceStatusStr: " + response.body().getDeviceStatusStr());
                     deviceStatusObj = response.body();
-                    pairSuccessInd();//返回配对结果
+                    pairSuccessInd();// Return pairing result
                 } else {
                     //retrunFail(response.code());
                     secondTextView.append("\n" + StatusCode.parse(response.code(), getContext()));
@@ -202,7 +202,7 @@ public class AddSecondFragment extends Fragment {
                 //You can also cache hxjBluetoothDevice to operate
                 hxjBleClient.disConnectBle(null);
 
-                if (response.isSuccessful()) {//添加成功
+                if (response.isSuccessful()) {// Added successfully
                     hxjBleClient.rfModulePairing(
                             hxBleAction,
                             "",
@@ -222,11 +222,11 @@ public class AddSecondFragment extends Fragment {
                   new Handler().postDelayed(new Runnable() {
                         @Override
                         public void run() {
-                            //如果包含NB-IoT模组，则获取模组信息
+                            // If it contains an NB-IoT module, get the module information
                             if (dnaInfoObj.getrFMoudleType() == 0x05) {
                                 getNBIoTModuleInfo();
                             } else {
-                                //页面跳转
+                                // Navigate to page
                                 if (getActivity() != null) {
                                     Intent replyIntent = new Intent();
                                     Lock.LockBuilder lockBuilder = Lock.LockBuilder.aLock();
@@ -237,7 +237,7 @@ public class AddSecondFragment extends Fragment {
                         }
                     }, 3000);
                 } else {
-                    //添加失败
+                    // Failed to add
                     exitIn5s(response);
                 }
             }
@@ -309,7 +309,7 @@ public class AddSecondFragment extends Fragment {
 
     private void AddToServer() {
 
-        // 将这2个值发送给服务器
+        // Send these 2 values to the server
         String deviceDnaInfoStr = dnaInfoObj.getDeviceDnaInfoStr();
         String deviceStatusStr =  deviceStatusObj.getDeviceStatusStr();
 
@@ -333,7 +333,7 @@ public class AddSecondFragment extends Fragment {
 
         Lock lock = lockBuilder.build();
 
-        //add to sqllite
+        // Add to SQLite
         LockViewModel lockViewModel = new ViewModelProvider(this).get(LockViewModel.class);
         lockViewModel.insert(lock);
     }

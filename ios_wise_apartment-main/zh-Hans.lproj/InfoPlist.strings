@@ -1,0 +1,11 @@
+/* 
+  InfoPlist.strings
+  HXJBLESDKDemo
+
+  Created by JQ on 2019/6/5.
+  Copyright © 2019 JQ. All rights reserved.
+*/
+
+"CFBundleName" = "智能锁";
+"NSBluetoothAlwaysUsageDescription" = "用于添加蓝牙锁";
+"NSBluetoothPeripheralUsageDescription" = "用于添加蓝牙锁";

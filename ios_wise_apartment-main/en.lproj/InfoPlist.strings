@@ -1,0 +1,11 @@
+/* 
+  InfoPlist.strings
+  HXJBLESDKDemo
+
+  Created by JQ on 2019/6/5.
+  Copyright © 2019 JQ. All rights reserved.
+*/
+
+"CFBundleName" = "SmartLock";
+"NSBluetoothAlwaysUsageDescription" = "Used to add Bluetooth lock";
+"NSBluetoothPeripheralUsageDescription" = "Used to add Bluetooth lock";
